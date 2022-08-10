@@ -128,6 +128,8 @@
             android:hint="@string/masukkan_alamat_tinggal"
             android:importantForAutofill="no"
             android:inputType="textMultiLine"
+            android:singleLine="false"
+            android:lines="3"
             android:minHeight="48dp"
             android:textColorHint="#78909C"
             tools:ignore="LabelFor" />
