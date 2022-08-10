@@ -1,8 +1,14 @@
 package com.rii.proyek3;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -48,6 +54,46 @@ public class MainActivity extends AppCompatActivity {
         btnSimpan.setVisibility(View.GONE);
 
         bacaFileLogin();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()) {
+            case R.id.itemLogout:
+                tampilkanDialogKonfirmasiLogout();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    void tampilkanDialogKonfirmasiLogout()
+    {
+        new AlertDialog.Builder(this)
+                .setTitle("Logout")
+                .setMessage("Apakah anda yakin ingin logout?")
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        hapusFile();
+                        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                })
+                .setNegativeButton(android.R.string.no, null).show();
+    }
+
+    void hapusFile()
+    {
+        File file = new File(getFilesDir(), FILENAME);
+        file.delete();
     }
 
     void bacaFileLogin() {
@@ -102,4 +148,6 @@ public class MainActivity extends AppCompatActivity {
             editAlamat.setText(detailUser[5]);
         }
     }
+
+
 }

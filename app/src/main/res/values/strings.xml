@@ -16,4 +16,5 @@
     <string name="masukkan_asal_sekolah">Masukkan asal sekolah</string>
     <string name="masukkan_nama_lengkap">Masukkan nama lengkap</string>
     <string name="masukkan_alamat_email">Masukkan alamat email</string>
+    <string name="logout">Logout</string>
 </resources>
