@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">proyek3</string>
+    <string name="logo_splash_screen">Logo Splash Screen</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">login</string>
+    <string name="register">register</string>
+    <string name="masukkan_username">Masukkan username</string>
+    <string name="masukkan_password">Masukkan password</string>
+    <string name="email">Email</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="asal_sekolah">Asal Sekolah</string>
+    <string name="alamat_tinggal">Alamat Tinggal</string>
+    <string name="simpan">simpan</string>
+    <string name="masukkan_alamat_tinggal">Masukkan alamat tinggal</string>
+    <string name="masukkan_asal_sekolah">Masukkan asal sekolah</string>
+    <string name="masukkan_nama_lengkap">Masukkan nama lengkap</string>
+    <string name="masukkan_alamat_email">Masukkan alamat email</string>
+</resources>
